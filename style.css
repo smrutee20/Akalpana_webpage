@@ -18,7 +18,255 @@
     left: 16px;
     line-height: 60px;
     cursor: pointer;
+    transition: all 0.3s linear;*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box{
+    background: url("photo.jpg");
+    height: 100vh;
+    background-size: cover;    
+}
+
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight:  700px;
+    position:absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
     transition: all 0.3s linear;
+}
+
+.btn_one {
+    position: absolute;
+    top: 10px; /* Adjust top position as needed */
+    right: 60px; /* Adjust left position as needed */
+    z-index: 1; /* Ensure it stays above other elements */
+    /* Increase size and add shadow */
+  width: 60px;
+  height: 60px;
+   /* Ensure it's circular */
+
+   background-color: rgba(255, 165, 0, 0.4) /* Adjust shadow color and opacity */
+  /*box-shadow: 0 4px 6px white;*/
+  }
+  
+  
+
+  .sidebar_menu {
+    position: fixed;
+    right: -300px; /* Position the sidebar outside of the viewport initially */
+    top: 0; /* Start the sidebar from the top */
+    height: 100vh;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: right 0.3s linear; /* Apply transition to the right property */
+  }
+
+.sidebar_menu .logo{
+    position:absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar_menu .menu {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .btn_two i{
+    color: grey;
+    font-size: 30px;  
+    line-height: 60px;
+    position: absolute;
+    right: 275px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.sidebar_menu .menu li{
+    margin-top: 6px;
+    padding: 14px 20px;
+}
+
+.sidebar_menu .menu i,
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+    color: white;
+    opacity: 0.6;
+    position: absolute;
+    left: 25%;
+    bottom: 20px;
+
+}
+
+.sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.6;
+    padding: 0 5px;
+}
+
+#check{
+    display: none;
+}
+
+.sidebar_menu .menu li:hover{
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn_one i:hover{
+    font-size: 40px;
+}
+
+.btn_two i:hover{
+    font-size: 40px; 
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#check:checked ~ .sidebar_menu{
+    right: 0;
+}
+
+#check:checked ~ .btn_one {
+    opacity: 0;
+}
+
+#check:checked ~ .btn_one i{
+    opacity: 0;
+}
+
+#check:checked ~  .sidebar_menu .btn_two i{
+    opacity: 1;
+}
+
+
+
+  
+.main_box {
+    padding: 100px; /* Adjust padding as needed */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  
+
+  .main_box h1 {
+    color: white;
+    font-size: 600px; /* Initial font size */
+    margin-top: 1vh; /* Adjust vertical margin to center vertically */
+    animation: akalpanaAnimation 1s forwards; /* Apply animation */
+    text-shadow: 1px 1px 1px orange;
+    font-weight: 400; /* Decrease font weight */
+    font-stretch: 75%;
+  }
+  
+  @keyframes akalpanaAnimation {
+    from {
+      font-size: 600px; /* Starting font size */
+    }
+    to {
+      font-size: 100px; /* Ending font size */
+    }
+  }
+  
+  .main_box h3 {
+    color: grey; /* Set color to grey */
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent wrapping */
+    border-right: 2px solid orange; /* Add a border for typing effect */
+    animation: typing 3s steps(40, end) 1s forwards, blink-caret 0.75s step-end infinite; /* Typing animation */
+  }
+  
+  .main_box h3 .highlight {
+    color: orange; /* Highlight color */
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0; /* Start from zero width */
+    }
+    to {
+      width: 35%; /* End at full width */
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent; /* Blinking caret effect */
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+  .main_box h3 {
+    animation-fill-mode: forwards;
+  }
+  
+  
+
+
+  
+  .main_box .search_button {
+    display: inline-flex;
+    align-items: center;
+    background-color: orange;
+    border-radius: 20px;
+    padding: 4px;
+  }
+  
+  .main_box .search_button input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    flex: 1; /* Takes remaining space */
+    border-top-left-radius: 20px; /* Adjust border-radius for the top-left corner */
+    border-bottom-left-radius: 20px;
+  }
+  
+  .main_box .search_button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 20px;
+  }
+  
+  
+
 }
 
 .sidebar_menu{
